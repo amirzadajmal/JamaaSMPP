@@ -17,7 +17,7 @@ namespace DemoClient
             properties.Password = "XXXXXXX";
             properties.Port = 5050;
             properties.Host = "XX.XXX.X.XXX";
-            properties.SourceAddress = "0728861899";
+            properties.SourceAddress = "XXXXXXXXXX";
             properties.DefaultEncoding = DataCoding.UCS2;
 
             //Resume a lost connection after 30 seconds
