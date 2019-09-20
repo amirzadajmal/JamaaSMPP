@@ -1,11 +1,7 @@
 ﻿using JamaaTech.Smpp.Net.Client;
-using JamaaTech.Smpp.Net.Lib.Util;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using JamaaTech.Smpp.Net.Lib;
-using JamaaTech.Smpp.Net.Lib.Protocol;
 
 namespace DemoClient
 {
@@ -17,10 +13,10 @@ namespace DemoClient
         {
             SmppConnectionProperties properties = client.Properties;
 
-            properties.SystemID = "MOF";
-            properties.Password = "Mof@123";
+            properties.SystemID = "XXX";
+            properties.Password = "XXXXXXX";
             properties.Port = 5050;
-            properties.Host = "10.150.6.134";
+            properties.Host = "XX.XXX.X.XXX";
             properties.SourceAddress = "0728861899";
             properties.DefaultEncoding = DataCoding.UCS2;
 
@@ -42,11 +38,10 @@ namespace DemoClient
             var msg = new TextMessage();
 
             Console.Write("Please enter your phone number: ");
-            msg.DestinationAddress = "93766608880";
+            msg.DestinationAddress = "XXXXXXXXXXXX";
 
-            msg.SourceAddress = "0728861899";
-            //msg.Text = "سلام";
-            msg.Text = "hi there";
+            msg.SourceAddress = "XXXXXXXXXX";
+            msg.Text = "سلام";
             msg.RegisterDeliveryNotification = true;
 
             client.SendMessage(msg);
